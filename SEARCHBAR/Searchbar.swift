@@ -11,6 +11,7 @@ import UIKit
 class Searchbar: UIViewController {
 
     @IBOutlet var SearchbarCollectionView: UICollectionView!
+    var mybutton = false
     
     @IBOutlet weak var icecreamSearchBar: UISearchBar!
     //var icecream = ["6", "7", "8", "9", "10"]
@@ -34,6 +35,11 @@ class Searchbar: UIViewController {
     }
     
 
+    @objc func likeButtonTapped(_ sender : UIButton) {
+      
+        sender.isSelected = !sender.isSelected
+        
+    }
    
 }
 extension Searchbar: UICollectionViewDataSource, UICollectionViewDelegate, UISearchBarDelegate, UICollectionViewDelegateFlowLayout {
@@ -48,7 +54,8 @@ extension Searchbar: UICollectionViewDataSource, UICollectionViewDelegate, UISea
             else{
                 fatalError()
             }
-           cell.icecreamUILabel.text = self.filteredData[indexPath.row]
+        cell.icecreamUILabel.text = self.filteredData[indexPath.row]
+        cell.likeButton.addTarget(self, action: #selector(likeButtonTapped(_:)), for: .touchUpInside)
         cell.icecreamImageView.image = UIImage(named:filteredData[indexPath.row])
         return cell
 
@@ -73,6 +80,7 @@ extension Searchbar: UICollectionViewDataSource, UICollectionViewDelegate, UISea
 
 class Customcell: UICollectionViewCell {
         
-        @IBOutlet weak var icecreamImageView: UIImageView!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var icecreamImageView: UIImageView!
         @IBOutlet weak var icecreamUILabel: UILabel!
 }

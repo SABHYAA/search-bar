@@ -46,7 +46,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nV2-rK-x5R">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="350"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="309"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3c-ee-0UA">
                                                     <rect key="frame" x="20" y="369" width="325" height="24"/>
@@ -55,6 +55,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJC-wX-lUc">
+                                                    <rect key="frame" x="316" y="317" width="39" height="39"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <state key="normal" title="Like"/>
+                                                    <state key="selected" title="Unlike"/>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
@@ -62,15 +68,19 @@
                                             <constraint firstItem="nV2-rK-x5R" firstAttribute="leading" secondItem="Mya-EW-IaX" secondAttribute="leading" id="5gT-2E-nGx"/>
                                             <constraint firstItem="nV2-rK-x5R" firstAttribute="top" secondItem="Mya-EW-IaX" secondAttribute="top" id="9H7-a9-nAp"/>
                                             <constraint firstItem="d3c-ee-0UA" firstAttribute="leading" secondItem="Mya-EW-IaX" secondAttribute="leadingMargin" constant="4" id="MQg-Xh-sY4"/>
-                                            <constraint firstItem="d3c-ee-0UA" firstAttribute="top" secondItem="nV2-rK-x5R" secondAttribute="bottom" constant="19" id="cnO-nj-bNq"/>
+                                            <constraint firstAttribute="trailing" secondItem="sJC-wX-lUc" secondAttribute="trailing" constant="20" id="aqE-eZ-fGS"/>
+                                            <constraint firstItem="d3c-ee-0UA" firstAttribute="top" secondItem="nV2-rK-x5R" secondAttribute="bottom" constant="60" id="cnO-nj-bNq"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="d3c-ee-0UA" secondAttribute="trailing" constant="14" id="fPx-DQ-L7l"/>
+                                            <constraint firstItem="sJC-wX-lUc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Mya-EW-IaX" secondAttribute="leading" symbolic="YES" id="moT-be-Dvk"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="d3c-ee-0UA" secondAttribute="bottom" constant="9" id="n9t-lU-HNf"/>
-                                            <constraint firstAttribute="bottom" secondItem="nV2-rK-x5R" secondAttribute="bottom" constant="52" id="omE-x0-eg3"/>
+                                            <constraint firstAttribute="bottom" secondItem="nV2-rK-x5R" secondAttribute="bottom" constant="93" id="omE-x0-eg3"/>
+                                            <constraint firstItem="d3c-ee-0UA" firstAttribute="top" secondItem="sJC-wX-lUc" secondAttribute="bottom" constant="13" id="ruI-6u-XsH"/>
                                         </constraints>
                                         <size key="customSize" width="375" height="402"/>
                                         <connections>
                                             <outlet property="icecreamImageView" destination="nV2-rK-x5R" id="Tys-wk-MGS"/>
                                             <outlet property="icecreamUILabel" destination="d3c-ee-0UA" id="TR2-13-Psv"/>
+                                            <outlet property="likeButton" destination="sJC-wX-lUc" id="6ca-1J-fvS"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -89,12 +99,12 @@
                     </view>
                     <connections>
                         <outlet property="SearchbarCollectionView" destination="y0F-kj-6Tv" id="M7o-Jx-d9G"/>
-                        <outlet property="icecreamSearchBar" destination="5rA-Xn-eSc" id="p5u-eM-lOg"/>
+                        <outlet property="icecreamSearchBar" destination="5rA-Xn-eSc" id="Dra-9v-MYJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1652" y="-415.14242878560725"/>
+            <point key="canvasLocation" x="-2610.4000000000001" y="-745.27736131934034"/>
         </scene>
     </scenes>
 </document>
